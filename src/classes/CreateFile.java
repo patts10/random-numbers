@@ -36,6 +36,7 @@ public class CreateFile {
             	
             	bw.newLine();            		
             }
+            System.out.println("\nSe ha creado el archivo exitosamente");
             bw.close();            		
 
 	} catch (Exception e) {

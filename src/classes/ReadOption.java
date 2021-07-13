@@ -17,8 +17,6 @@ public class ReadOption {
 		String fileName = "";
 		
 		switch (option) {
-		case "0":
-			
 		case "1":
 			
 			String numbers = input.getNumber("¿Cuántos números deseas?");
@@ -26,13 +24,14 @@ public class ReadOption {
 						
 			List<Integer> dataFile = new ArrayList<>();
 			int numAsInt = Integer.parseInt(numbers);
+			
 			for (int i = 0; i < numAsInt ; i++) {
 				int num = randomNum.randomNumber(0, 100);
 				dataFile.add(num);
 			}
 			
 			CreateFile.SaveFile("../files/" + fileName + ".txt", dataFile);	
-			System.out.println("\nSe ha creado el archivo exitosamente");
+//			System.out.println("\nSe ha creado el archivo exitosamente");
 			
 			PrintFile.printFile(fileName, dataFile);
 			

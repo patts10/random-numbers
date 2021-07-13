@@ -15,7 +15,6 @@ public class ReadFile {
 	
 	public static void showContent(String file) {
 		       
-		List<Integer> list = new ArrayList<>();
 		String fileName = "../files/" + file + ".txt";
 		boolean checkFile = new File("../files/", fileName).exists();
 		
@@ -31,7 +30,6 @@ public class ReadFile {
             	while (input.hasNextLine()) {
             		
             		String line = input.nextLine();
-            		list.add(Integer.parseInt(line));
             		System.out.println(line);
             	}
             	input.close();
