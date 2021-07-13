@@ -58,8 +58,8 @@ public class ReadOption {
 //			break;
 			
 		case "4":
-			fileName = input.getTitulo("¿Cuál es nombre del archivo?");
 			int inputNum = Integer.parseInt(input.getNumber("¿Cuál es el número que desea buscar?"));
+			fileName = input.getTitulo("¿Cuál es nombre del archivo?");
 			
 			SearchNumber.findNumber(fileName, inputNum);
 			
