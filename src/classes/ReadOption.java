@@ -21,8 +21,8 @@ public class ReadOption {
 			
 		case "1":
 			
-			fileName = input.getTitulo("¿Cuál será el nombre del archivo? ");
 			String numbers = input.getNumber("¿Cuántos números deseas?");
+			fileName = input.getTitulo("¿Cuál será el nombre del archivo? ");
 						
 			List<Integer> dataFile = new ArrayList<>();
 			int numAsInt = Integer.parseInt(numbers);

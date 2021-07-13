@@ -52,5 +52,20 @@ public class GetInput {
 			}
 			return num;
 	}
+	
+	public String getAnswer(String titulo) {
+			
+			String option = "";
+			
+			while( option.equals("") ) {
+				System.out.println(titulo);
+				option = sc.nextLine();
+				
+				if(!option.matches("[y|n|Y|N]")) {
+					option = "";
+				}
+			}
+			return option;
+		}
 
 }
