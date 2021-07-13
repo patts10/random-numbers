@@ -17,17 +17,12 @@ public class SearchNumber {
 					.stream()
 					.filter( (i) -> i== num )
 					.collect(Collectors.toList());
-			
-			System.out.println(fileContent.get(0));
-			if (fileContent.size() == 0) {
-				System.out.println("Su numero no existe en este archivo");
-				return;
-			}
-			
-			if (fileContent.get(0) == num) {
-				System.out.println("Su número existe");
+
+			if (fileContent.contains(num)) {
+			    System.out.println("Su número existe");
 			} else {
-				System.out.println("Su numero no existe en este archivo");
+			    System.out.println("Su numero no existe en este archivo");
+				return;
 			}
 			
 		} catch (Exception e) {

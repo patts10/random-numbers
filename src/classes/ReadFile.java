@@ -28,22 +28,30 @@ public class ReadFile {
 //        b.close();
 //        return ans;        
 		List<Integer> list = new ArrayList<>();
+		String fileName = "../files/" + file + ".txt";
+		boolean checkFile = new File("../files/", fileName).exists();
 		
         try {
-        	String fileName = "../files/" + file + ".txt";
-            Scanner input = new Scanner(new File(fileName));   
             
-            System.out.println("=============================");
-    		System.out.println("\t***** " + file.toUpperCase() + " *****");
-    		System.out.println("=============================");
-            
-            while (input.hasNextLine()) {
+            if (checkFile) {
+				
+            	Scanner input = new Scanner(new File(fileName));    
+            	System.out.println("=============================");
+            	System.out.println("\t***** " + file.toUpperCase() + " *****");
+            	System.out.println("=============================");
             	
-                String line = input.nextLine();
-                list.add(Integer.parseInt(line));
-                System.out.println(line);
-            }
-            input.close();
+            	while (input.hasNextLine()) {
+            		
+            		String line = input.nextLine();
+            		list.add(Integer.parseInt(line));
+            		System.out.println(line);
+            	}
+            	input.close();
+			} else {
+				System.out.println("Archivo no encontrado");
+				System.exit(0);
+			}
+            
         } catch (Exception ex) {
             ex.printStackTrace();
         }

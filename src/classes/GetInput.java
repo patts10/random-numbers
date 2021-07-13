@@ -31,7 +31,7 @@ public class GetInput {
 				System.out.println(titulo);
 				option = sc.nextLine();
 				
-				if(!option.matches("[a-zA-Z0-9\\w ]{1,30}")) {
+				if(!option.matches("[a-zA-Z0-9\\w\\D ]{1,30}")) {
 					option = "";
 				}
 			}

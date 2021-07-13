@@ -17,6 +17,8 @@ public class ReadOption {
 		String fileName = "";
 		
 		switch (option) {
+		case "0":
+			
 		case "1":
 			
 			fileName = input.getTitulo("¿Cuál será el nombre del archivo? ");
@@ -29,7 +31,6 @@ public class ReadOption {
 				dataFile.add(num);
 			}
 			
-			System.out.println(dataFile);
 			CreateFile.SaveFile("../files/" + fileName + ".txt", dataFile);	
 			System.out.println("\nSe ha creado el archivo exitosamente");
 			

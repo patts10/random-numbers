@@ -12,45 +12,31 @@ public class ListFile {
 	public List<Integer> listFile(String file ) {
 		
 		List<Integer> list = new ArrayList<>();
+		String fileName = "../files/" + file + ".txt";
+		boolean checkFile = new File("../files/", fileName).exists();
+		
 		try {
-        	String fileName = "../files/" + file + ".txt";
-            Scanner input = new Scanner(new File(fileName));   
+			if (checkFile) {
+
+				Scanner input = new Scanner(new File(fileName));   
+				
+				
+				while (input.hasNextLine()) {
+					
+					String line = input.nextLine();
+					list.add(Integer.parseInt(line));
+				}
+				input.close();				
+			}
+			else {
+				System.out.println("Archivo no encontrado");
+				System.exit(0);
+			}
+			
             
-            while (input.hasNextLine()) {
-            	
-                String line = input.nextLine();
-                list.add(Integer.parseInt(line));
-            }
-            input.close();
         } catch (Exception ex) {
             ex.printStackTrace();
         }
         return list;
 	}
-	
-//	public List<Integer> showContent(String file) {
-//		 
-//		List<Integer> list = new ArrayList<>();
-//		
-//      try {
-//      	String fileName = "../files/" + file + ".txt";
-//          Scanner input = new Scanner(new File(fileName));   
-//          
-//          System.out.println("=============================");
-//  		System.out.println("\t***** " + file.toUpperCase() + " *****");
-//  		System.out.println("=============================");
-//          
-//          while (input.hasNextLine()) {
-//          	
-//              String line = input.nextLine();
-//              list.add(Integer.parseInt(line));
-//              System.out.println(line);
-//          }
-//          input.close();
-//      } catch (Exception ex) {
-//          ex.printStackTrace();
-//      }
-//      return list;
-//  }
-	
 }

@@ -1,6 +1,4 @@
 package classes;
-import java.util.Arrays;
-import java.util.List;
 
 public class GenNumApp {
 	public static void main(String[] args)  {
@@ -8,12 +6,13 @@ public class GenNumApp {
 			
 		GetInput input = new GetInput();
 		
-		System.out.println("OPCIONES\n");
-		System.out.println("0 - Menu");
-		System.out.println("1 - Genera nuevo archivo");
-		System.out.println("2 - Lee archivo generado");
-		System.out.println("3 - Ordena archivo");
-		System.out.println("4 - Lee archivo ordenado");
+		System.out.println("********************************");
+		System.out.println("            OPCIONES");
+		System.out.println("********************************\n");
+		System.out.println("1 - Generar archivo");
+		System.out.println("2 - Leer archivo");
+		System.out.println("3 - Ordenar archivo");
+		System.out.println("4 - Leer archivo ordenado");
 		System.out.println("5 - Buscar numero en archivo");
 		System.out.println("6 - salir\n");
 		
@@ -21,9 +20,7 @@ public class GenNumApp {
 		
 		ReadOption readOption = new ReadOption();
 		
-		readOption.options(option);
-
-			
+		readOption.options(option);			
 			
 	}
 }

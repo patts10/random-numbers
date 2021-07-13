@@ -31,26 +31,9 @@ public class CreateFile {
              
             bw.close();
         } catch (Exception e) {
+        	System.out.println("No se pudo realizar la tarea");
             e.printStackTrace();
         }
-		
-		
-//		try {
-//
-//            File file = new File(route);
-//            
-//            // Si el archivo no existe es creado
-//            if (!file.exists()) {
-//                file.createNewFile();
-//            }
-//            FileWriter fw = new FileWriter(file);
-//            BufferedWriter bw = new BufferedWriter(fw);
-//            bw.write(content);
-//            bw.close();
-//            System.out.println("\nSe ha creado el archivo exitosamente");
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
 	}
 
 	

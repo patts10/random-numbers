@@ -19,9 +19,10 @@ public class OrderFile {
 		try {
 			List<Integer> fileContent = listFile.listFile(file);
 			Collections.sort(fileContent);
+			String nameFile = file + "-ordenado.txt";
+			route = "../files/" + nameFile;
 			CreateFile.SaveFile(route, fileContent);
-			System.out.println("El archivo se ordenó satisfactoriamente");
-//			System.out.println(fileContent);
+			System.out.println("Se creó " + nameFile + " con los valores ordenados.");
 			
 		} catch (Exception e) {
 			System.out.println("No se pudo realizar la tarea");
