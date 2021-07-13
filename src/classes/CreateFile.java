@@ -19,7 +19,7 @@ public class CreateFile {
             
             // Si el archivo no existe es creado
             if(file.exists()) {
-            	String ans = input.getAnswer("El archivo ya existe, ¿desea reemplazarlo?");            	
+            	String ans = input.getAnswer("El archivo ya existe, ¿desea reemplazarlo? y/n");            	
             	if(ans.equals("n")) {
             		System.out.println("La tarea ha sido cancelada");
             		System.exit(0);
@@ -31,27 +31,12 @@ public class CreateFile {
             BufferedWriter bw = new BufferedWriter(fw);
             
             for (int i = 0; i < content.size(); i++) {
-//                	bw.write(content.get(i));
+
             	bw.write(content.get(i).toString());
             	
             	bw.newLine();            		
             }
             bw.close();            		
-            
-//            if (!file.exists()) {
-//                file.createNewFile();
-//            }
-//            FileWriter fw = new FileWriter(file);
-//            BufferedWriter bw = new BufferedWriter(fw);
-//            
-//            for (int i = 0; i < content.size(); i++) {
-////            	bw.write(content.get(i));
-//            	bw.write(content.get(i).toString());
-//            	
-//            	bw.newLine();
-//			}
-//             
-//            bw.close();
 
 	} catch (Exception e) {
         	System.out.println("No se pudo realizar la tarea");

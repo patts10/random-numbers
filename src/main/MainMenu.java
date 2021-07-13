@@ -1,9 +1,12 @@
-package classes;
+package main;
 
-public class GenNumApp {
-	public static void main(String[] args)  {
+import classes.GetInput;
+import classes.ReadOption;
+
+public class MainMenu {
+
+	public static void main(String[] args) {
 		
-			
 		GetInput input = new GetInput();
 		
 		System.out.println("********************************");
