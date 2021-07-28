@@ -8,7 +8,8 @@ public class MainMenu {
 	public static void main(String[] args) {
 		
 		GetInput input = new GetInput();
-		
+
+		//***********PROBANDO
 		System.out.println("********************************");
 		System.out.println("            OPCIONES");
 		System.out.println("********************************\n");
@@ -19,7 +20,7 @@ public class MainMenu {
 		System.out.println("4 - Buscar numero en archivo");
 		System.out.println("5 - salir\n");
 		
-		String option = input.getOption("Seleccione una opción: ");
+		String option = input.getOption("Seleccione una opciï¿½n: ");
 		
 		ReadOption readOption = new ReadOption();
 		
